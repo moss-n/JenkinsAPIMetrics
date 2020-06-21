@@ -14,7 +14,6 @@ class DurationMetrics:
     numberOfBuilds = 0.0
     buildDurations = []
     buildTimestamps = []
-    getAllBuildInfo = False
     server = None
 
     def __init__(self,username,password):
@@ -34,6 +33,7 @@ class DurationMetrics:
         plt.xlabel('Time of Execution')
         plt.ylabel('Build Duration (seconds)')
         plt.title('Build Durations Over Time')
+        plt.gcf().autofmt_xdate()
         plt.show()
 
     def getJobDuration(self):
